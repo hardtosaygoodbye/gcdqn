@@ -1,37 +1,80 @@
 //
 //  BaseNavigationController.m
-//  gcdqn
+//  I3IntelligentEye
 //
-//  Created by admin on 16/7/19.
-//  Copyright © 2016年 hardtosaygoodbye. All rights reserved.
+//  Created by MacOS on 14-7-17.
+//  Copyright (c) 2014年 d-5. All rights reserved.
 //
 
 #import "BaseNavigationController.h"
-
+#import "Public.h"
 @interface BaseNavigationController ()
 
 @end
 
 @implementation BaseNavigationController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self loadThemeImage];
+    
+    [self.navigationBar setBarStyle:UIBarStyleBlack];
+    
+    //添加向右的清扫手势
+    UISwipeGestureRecognizer *swipGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipAction:)];
+    swipGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    // 响应的手指数
+    swipGesture.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:swipGesture];
+    
+}
+
+- (void)swipAction:(UISwipeGestureRecognizer *)gesture
+{
+    if (self.viewControllers.count <= 1) {
+        return;
+    }
+    [self popViewControllerAnimated:NO];
+
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)loadThemeImage
+{
+    //导航栏背景色 RGB 值 32，81，148
+    if (SystemVersion >=7.0) {
+        UIImage *image = [UIImage imageNamed:@"navigationbar_bg"];
+        [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    }
+    else if (SystemVersion >= 5.0) { //判断系统版本方法一
+        UIImage *image = [UIImage imageNamed:@"navigationbar_bg_4"];
+        [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    } else {
+        //调用setNeedsDisplay方法会让绚烂引擎异步调用drawRect方法
+//        [self.navigationBar setNeedsDisplay];
+    }
+    
 }
-*/
+
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated
+{
+    return [super popViewControllerAnimated:animated];
+}
 
 @end

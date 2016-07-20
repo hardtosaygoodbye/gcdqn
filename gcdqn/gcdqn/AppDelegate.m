@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "TimetableViewController.h"
 #import "BaseNavigationController.h"
+#import "CourseViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +21,8 @@
     // Override point for customization after application launch.
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
-    TimetableViewController *timetableVC=[[TimetableViewController alloc]init];
-    BaseNavigationController *baseNC=[[BaseNavigationController alloc]initWithRootViewController:timetableVC];
+    CourseViewController *courseVC = [[CourseViewController alloc]init];
+    BaseNavigationController *baseNC = [[BaseNavigationController alloc]initWithRootViewController:courseVC];
     self.window.rootViewController=baseNC;
     return YES;
     

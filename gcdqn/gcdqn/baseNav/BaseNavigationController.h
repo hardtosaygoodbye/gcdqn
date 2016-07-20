@@ -1,9 +1,9 @@
 //
 //  BaseNavigationController.h
-//  gcdqn
+//  I3IntelligentEye
 //
-//  Created by admin on 16/7/19.
-//  Copyright © 2016年 hardtosaygoodbye. All rights reserved.
+//  Created by MacOS on 14-7-17.
+//  Copyright (c) 2014年 d-5. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

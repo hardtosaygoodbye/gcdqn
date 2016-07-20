@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TimetableViewController.h"
+#import "BaseNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor=[UIColor whiteColor];
+    TimetableViewController *timetableVC=[[TimetableViewController alloc]init];
+    BaseNavigationController *baseNC=[[BaseNavigationController alloc]initWithRootViewController:timetableVC];
+    self.window.rootViewController=baseNC;
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

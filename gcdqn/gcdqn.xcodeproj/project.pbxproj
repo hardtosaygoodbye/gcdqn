@@ -12,6 +12,10 @@
 		84AEA5891D3B03A3003AC5D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AEA5871D3B03A3003AC5D3 /* Main.storyboard */; };
 		84AEA58B1D3B03A3003AC5D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84AEA58A1D3B03A3003AC5D3 /* Assets.xcassets */; };
 		84AEA58E1D3B03A3003AC5D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AEA58C1D3B03A3003AC5D3 /* LaunchScreen.storyboard */; };
+		84CAAFB91D3E4AF200678E33 /* TimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAFB81D3E4AF200678E33 /* TimetableViewController.m */; };
+		84CAAFBD1D3E4C3600678E33 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAFBC1D3E4C3600678E33 /* BaseNavigationController.m */; };
+		84CAAFC31D3E518000678E33 /* DayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAFC21D3E518000678E33 /* DayView.m */; };
+		84CAAFC61D3E5BE900678E33 /* WeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAFC51D3E5BE900678E33 /* WeekView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,15 @@
 		84AEA58A1D3B03A3003AC5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84AEA58D1D3B03A3003AC5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84AEA58F1D3B03A3003AC5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CAAFB71D3E4AF200678E33 /* TimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableViewController.h; sourceTree = "<group>"; };
+		84CAAFB81D3E4AF200678E33 /* TimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableViewController.m; sourceTree = "<group>"; };
+		84CAAFBB1D3E4C3600678E33 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		84CAAFBC1D3E4C3600678E33 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		84CAAFC11D3E518000678E33 /* DayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayView.h; sourceTree = "<group>"; };
+		84CAAFC21D3E518000678E33 /* DayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayView.m; sourceTree = "<group>"; };
+		84CAAFC41D3E5BE900678E33 /* WeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekView.h; sourceTree = "<group>"; };
+		84CAAFC51D3E5BE900678E33 /* WeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekView.m; sourceTree = "<group>"; };
+		84CAAFCB1D3E5F6F00678E33 /* Public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +68,9 @@
 		84AEA57D1D3B03A3003AC5D3 /* gcdqn */ = {
 			isa = PBXGroup;
 			children = (
+				84CAAFC71D3E5ED800678E33 /* Utils */,
+				84CAAFBA1D3E4C0100678E33 /* baseNav */,
+				84CAAFB21D3E4AA800678E33 /* timetable */,
 				84AEA5811D3B03A3003AC5D3 /* AppDelegate.h */,
 				84AEA5821D3B03A3003AC5D3 /* AppDelegate.m */,
 				84AEA5871D3B03A3003AC5D3 /* Main.storyboard */,
@@ -72,6 +88,68 @@
 				84AEA57F1D3B03A3003AC5D3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84CAAFB21D3E4AA800678E33 /* timetable */ = {
+			isa = PBXGroup;
+			children = (
+				84CAAFB31D3E4AA800678E33 /* model */,
+				84CAAFB41D3E4AA800678E33 /* view */,
+				84CAAFB51D3E4AA800678E33 /* viewController */,
+				84CAAFB61D3E4AA800678E33 /* viewModel */,
+			);
+			path = timetable;
+			sourceTree = "<group>";
+		};
+		84CAAFB31D3E4AA800678E33 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		84CAAFB41D3E4AA800678E33 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				84CAAFC11D3E518000678E33 /* DayView.h */,
+				84CAAFC21D3E518000678E33 /* DayView.m */,
+				84CAAFC41D3E5BE900678E33 /* WeekView.h */,
+				84CAAFC51D3E5BE900678E33 /* WeekView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		84CAAFB51D3E4AA800678E33 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				84CAAFB71D3E4AF200678E33 /* TimetableViewController.h */,
+				84CAAFB81D3E4AF200678E33 /* TimetableViewController.m */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		84CAAFB61D3E4AA800678E33 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		84CAAFBA1D3E4C0100678E33 /* baseNav */ = {
+			isa = PBXGroup;
+			children = (
+				84CAAFBB1D3E4C3600678E33 /* BaseNavigationController.h */,
+				84CAAFBC1D3E4C3600678E33 /* BaseNavigationController.m */,
+			);
+			path = baseNav;
+			sourceTree = "<group>";
+		};
+		84CAAFC71D3E5ED800678E33 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84CAAFCB1D3E5F6F00678E33 /* Public.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CAAFC31D3E518000678E33 /* DayView.m in Sources */,
+				84CAAFBD1D3E4C3600678E33 /* BaseNavigationController.m in Sources */,
 				84AEA5831D3B03A3003AC5D3 /* AppDelegate.m in Sources */,
 				84AEA5801D3B03A3003AC5D3 /* main.m in Sources */,
+				84CAAFC61D3E5BE900678E33 /* WeekView.m in Sources */,
+				84CAAFB91D3E4AF200678E33 /* TimetableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

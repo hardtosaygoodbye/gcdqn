@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845405651D406873000153A7 /* TimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845405641D406873000153A7 /* TimetableViewController.m */; };
+		8454056B1D4068DA000153A7 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845405681D4068DA000153A7 /* BaseNavigationController.m */; };
 		84AEA5801D3B03A3003AC5D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEA57F1D3B03A3003AC5D3 /* main.m */; };
 		84AEA5831D3B03A3003AC5D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEA5821D3B03A3003AC5D3 /* AppDelegate.m */; };
 		84AEA5891D3B03A3003AC5D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AEA5871D3B03A3003AC5D3 /* Main.storyboard */; };
@@ -15,6 +17,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		845405631D406873000153A7 /* TimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableViewController.h; sourceTree = "<group>"; };
+		845405641D406873000153A7 /* TimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableViewController.m; sourceTree = "<group>"; };
+		845405671D4068DA000153A7 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		845405681D4068DA000153A7 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		8454056A1D4068DA000153A7 /* Public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
 		84AEA57B1D3B03A3003AC5D3 /* gcdqn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gcdqn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AEA57F1D3B03A3003AC5D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84AEA5811D3B03A3003AC5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +43,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8454055E1D4067F9000153A7 /* timetable */ = {
+			isa = PBXGroup;
+			children = (
+				8454055F1D4067F9000153A7 /* model */,
+				845405601D4067F9000153A7 /* view */,
+				845405611D4067F9000153A7 /* viewController */,
+				845405621D4067F9000153A7 /* viewModel */,
+			);
+			path = timetable;
+			sourceTree = "<group>";
+		};
+		8454055F1D4067F9000153A7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		845405601D4067F9000153A7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		845405611D4067F9000153A7 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				845405631D406873000153A7 /* TimetableViewController.h */,
+				845405641D406873000153A7 /* TimetableViewController.m */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		845405621D4067F9000153A7 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		845405661D4068DA000153A7 /* baseNav */ = {
+			isa = PBXGroup;
+			children = (
+				845405671D4068DA000153A7 /* BaseNavigationController.h */,
+				845405681D4068DA000153A7 /* BaseNavigationController.m */,
+			);
+			path = baseNav;
+			sourceTree = "<group>";
+		};
+		845405691D4068DA000153A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8454056A1D4068DA000153A7 /* Public.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		84AEA5721D3B03A2003AC5D3 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +120,9 @@
 		84AEA57D1D3B03A3003AC5D3 /* gcdqn */ = {
 			isa = PBXGroup;
 			children = (
+				845405661D4068DA000153A7 /* baseNav */,
+				845405691D4068DA000153A7 /* Utils */,
+				8454055E1D4067F9000153A7 /* timetable */,
 				84AEA5811D3B03A3003AC5D3 /* AppDelegate.h */,
 				84AEA5821D3B03A3003AC5D3 /* AppDelegate.m */,
 				84AEA5871D3B03A3003AC5D3 /* Main.storyboard */,
@@ -144,8 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8454056B1D4068DA000153A7 /* BaseNavigationController.m in Sources */,
 				84AEA5831D3B03A3003AC5D3 /* AppDelegate.m in Sources */,
 				84AEA5801D3B03A3003AC5D3 /* main.m in Sources */,
+				845405651D406873000153A7 /* TimetableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,26 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8456CA3D1D3F1347003F44FE /* CourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA3B1D3F1347003F44FE /* CourseViewController.m */; };
-		8456CA3E1D3F1347003F44FE /* CourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8456CA3C1D3F1347003F44FE /* CourseViewController.xib */; };
-		8456CA411D3F1377003F44FE /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA401D3F1377003F44FE /* BaseNavigationController.m */; };
-		8456CA461D3F1425003F44FE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA431D3F1425003F44FE /* MBProgressHUD.m */; };
-		8456CA471D3F1425003F44FE /* TwoTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA451D3F1425003F44FE /* TwoTitleButton.m */; };
-		8456CA4A1D3F1437003F44FE /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA491D3F1437003F44FE /* DateUtils.m */; };
-		8456CA4F1D3F1452003F44FE /* Term.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA4C1D3F1452003F44FE /* Term.m */; };
-		8456CA501D3F1452003F44FE /* WeekCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA4E1D3F1452003F44FE /* WeekCourse.m */; };
-		8456CA581D3F147D003F44FE /* CourseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA521D3F147D003F44FE /* CourseButton.m */; };
-		8456CA591D3F147D003F44FE /* DayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA541D3F147D003F44FE /* DayTableViewCell.m */; };
-		8456CA5A1D3F147D003F44FE /* DayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8456CA551D3F147D003F44FE /* DayTableViewCell.xib */; };
-		8456CA5B1D3F147D003F44FE /* WeekChoseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA571D3F147D003F44FE /* WeekChoseView.m */; };
-		8456CA5F1D3F1514003F44FE /* YFJLeftSwipeDeleteTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA5E1D3F1514003F44FE /* YFJLeftSwipeDeleteTableView.m */; };
-		8456CA671D3F15EE003F44FE /* TermCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA621D3F15EE003F44FE /* TermCell.m */; };
-		8456CA681D3F15EE003F44FE /* TermCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8456CA631D3F15EE003F44FE /* TermCell.xib */; };
-		8456CA691D3F15EE003F44FE /* TermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456CA651D3F15EE003F44FE /* TermViewController.m */; };
-		8456CA6A1D3F15EE003F44FE /* TermViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8456CA661D3F15EE003F44FE /* TermViewController.xib */; };
-		8456CA701D3F1821003F44FE /* courses-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 8456CA6D1D3F1821003F44FE /* courses-1.json */; };
-		8456CA711D3F1821003F44FE /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = 8456CA6E1D3F1821003F44FE /* courses.json */; };
-		8456CA721D3F1821003F44FE /* terms.json in Resources */ = {isa = PBXBuildFile; fileRef = 8456CA6F1D3F1821003F44FE /* terms.json */; };
 		84AEA5801D3B03A3003AC5D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEA57F1D3B03A3003AC5D3 /* main.m */; };
 		84AEA5831D3B03A3003AC5D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEA5821D3B03A3003AC5D3 /* AppDelegate.m */; };
 		84AEA5891D3B03A3003AC5D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AEA5871D3B03A3003AC5D3 /* Main.storyboard */; };
@@ -35,41 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8456CA3A1D3F1347003F44FE /* CourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseViewController.h; sourceTree = "<group>"; };
-		8456CA3B1D3F1347003F44FE /* CourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseViewController.m; sourceTree = "<group>"; };
-		8456CA3C1D3F1347003F44FE /* CourseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CourseViewController.xib; sourceTree = "<group>"; };
-		8456CA3F1D3F1377003F44FE /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
-		8456CA401D3F1377003F44FE /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
-		8456CA421D3F1425003F44FE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		8456CA431D3F1425003F44FE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		8456CA441D3F1425003F44FE /* TwoTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoTitleButton.h; sourceTree = "<group>"; };
-		8456CA451D3F1425003F44FE /* TwoTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoTitleButton.m; sourceTree = "<group>"; };
-		8456CA481D3F1437003F44FE /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		8456CA491D3F1437003F44FE /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
-		8456CA4B1D3F1452003F44FE /* Term.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Term.h; sourceTree = "<group>"; };
-		8456CA4C1D3F1452003F44FE /* Term.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Term.m; sourceTree = "<group>"; };
-		8456CA4D1D3F1452003F44FE /* WeekCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekCourse.h; sourceTree = "<group>"; };
-		8456CA4E1D3F1452003F44FE /* WeekCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekCourse.m; sourceTree = "<group>"; };
-		8456CA511D3F147D003F44FE /* CourseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseButton.h; sourceTree = "<group>"; };
-		8456CA521D3F147D003F44FE /* CourseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseButton.m; sourceTree = "<group>"; };
-		8456CA531D3F147D003F44FE /* DayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayTableViewCell.h; sourceTree = "<group>"; };
-		8456CA541D3F147D003F44FE /* DayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayTableViewCell.m; sourceTree = "<group>"; };
-		8456CA551D3F147D003F44FE /* DayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayTableViewCell.xib; sourceTree = "<group>"; };
-		8456CA561D3F147D003F44FE /* WeekChoseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekChoseView.h; sourceTree = "<group>"; };
-		8456CA571D3F147D003F44FE /* WeekChoseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekChoseView.m; sourceTree = "<group>"; };
-		8456CA5C1D3F1514003F44FE /* Public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
-		8456CA5D1D3F1514003F44FE /* YFJLeftSwipeDeleteTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFJLeftSwipeDeleteTableView.h; sourceTree = "<group>"; };
-		8456CA5E1D3F1514003F44FE /* YFJLeftSwipeDeleteTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFJLeftSwipeDeleteTableView.m; sourceTree = "<group>"; };
-		8456CA611D3F15EE003F44FE /* TermCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermCell.h; sourceTree = "<group>"; };
-		8456CA621D3F15EE003F44FE /* TermCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermCell.m; sourceTree = "<group>"; };
-		8456CA631D3F15EE003F44FE /* TermCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermCell.xib; sourceTree = "<group>"; };
-		8456CA641D3F15EE003F44FE /* TermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermViewController.h; sourceTree = "<group>"; };
-		8456CA651D3F15EE003F44FE /* TermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermViewController.m; sourceTree = "<group>"; };
-		8456CA661D3F15EE003F44FE /* TermViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermViewController.xib; sourceTree = "<group>"; };
-		8456CA6B1D3F16BA003F44FE /* JKCourse-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JKCourse-Prefix.pch"; sourceTree = "<group>"; };
-		8456CA6D1D3F1821003F44FE /* courses-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "courses-1.json"; sourceTree = "<group>"; };
-		8456CA6E1D3F1821003F44FE /* courses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
-		8456CA6F1D3F1821003F44FE /* terms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = terms.json; sourceTree = "<group>"; };
 		84AEA57B1D3B03A3003AC5D3 /* gcdqn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gcdqn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AEA57F1D3B03A3003AC5D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84AEA5811D3B03A3003AC5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,29 +36,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8456CA601D3F15EE003F44FE /* Term */ = {
-			isa = PBXGroup;
-			children = (
-				8456CA611D3F15EE003F44FE /* TermCell.h */,
-				8456CA621D3F15EE003F44FE /* TermCell.m */,
-				8456CA631D3F15EE003F44FE /* TermCell.xib */,
-				8456CA641D3F15EE003F44FE /* TermViewController.h */,
-				8456CA651D3F15EE003F44FE /* TermViewController.m */,
-				8456CA661D3F15EE003F44FE /* TermViewController.xib */,
-			);
-			path = Term;
-			sourceTree = "<group>";
-		};
-		8456CA6C1D3F1801003F44FE /* datas */ = {
-			isa = PBXGroup;
-			children = (
-				8456CA6D1D3F1821003F44FE /* courses-1.json */,
-				8456CA6E1D3F1821003F44FE /* courses.json */,
-				8456CA6F1D3F1821003F44FE /* terms.json */,
-			);
-			path = datas;
-			sourceTree = "<group>";
-		};
 		84AEA5721D3B03A2003AC5D3 = {
 			isa = PBXGroup;
 			children = (
@@ -133,11 +55,6 @@
 		84AEA57D1D3B03A3003AC5D3 /* gcdqn */ = {
 			isa = PBXGroup;
 			children = (
-				8456CA6C1D3F1801003F44FE /* datas */,
-				8456CA601D3F15EE003F44FE /* Term */,
-				84CAAFC71D3E5ED800678E33 /* Utils */,
-				84CAAFBA1D3E4C0100678E33 /* baseNav */,
-				84CAAFB21D3E4AA800678E33 /* timetable */,
 				84AEA5811D3B03A3003AC5D3 /* AppDelegate.h */,
 				84AEA5821D3B03A3003AC5D3 /* AppDelegate.m */,
 				84AEA5871D3B03A3003AC5D3 /* Main.storyboard */,
@@ -155,85 +72,6 @@
 				84AEA57F1D3B03A3003AC5D3 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		84CAAFB21D3E4AA800678E33 /* timetable */ = {
-			isa = PBXGroup;
-			children = (
-				84CAAFB31D3E4AA800678E33 /* model */,
-				84CAAFB41D3E4AA800678E33 /* view */,
-				84CAAFB51D3E4AA800678E33 /* viewController */,
-				84CAAFB61D3E4AA800678E33 /* viewModel */,
-			);
-			path = timetable;
-			sourceTree = "<group>";
-		};
-		84CAAFB31D3E4AA800678E33 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				8456CA4B1D3F1452003F44FE /* Term.h */,
-				8456CA4C1D3F1452003F44FE /* Term.m */,
-				8456CA4D1D3F1452003F44FE /* WeekCourse.h */,
-				8456CA4E1D3F1452003F44FE /* WeekCourse.m */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		84CAAFB41D3E4AA800678E33 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				8456CA511D3F147D003F44FE /* CourseButton.h */,
-				8456CA521D3F147D003F44FE /* CourseButton.m */,
-				8456CA531D3F147D003F44FE /* DayTableViewCell.h */,
-				8456CA541D3F147D003F44FE /* DayTableViewCell.m */,
-				8456CA551D3F147D003F44FE /* DayTableViewCell.xib */,
-				8456CA561D3F147D003F44FE /* WeekChoseView.h */,
-				8456CA571D3F147D003F44FE /* WeekChoseView.m */,
-				8456CA421D3F1425003F44FE /* MBProgressHUD.h */,
-				8456CA431D3F1425003F44FE /* MBProgressHUD.m */,
-				8456CA441D3F1425003F44FE /* TwoTitleButton.h */,
-				8456CA451D3F1425003F44FE /* TwoTitleButton.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		84CAAFB51D3E4AA800678E33 /* viewController */ = {
-			isa = PBXGroup;
-			children = (
-				8456CA3A1D3F1347003F44FE /* CourseViewController.h */,
-				8456CA3B1D3F1347003F44FE /* CourseViewController.m */,
-				8456CA3C1D3F1347003F44FE /* CourseViewController.xib */,
-			);
-			path = viewController;
-			sourceTree = "<group>";
-		};
-		84CAAFB61D3E4AA800678E33 /* viewModel */ = {
-			isa = PBXGroup;
-			children = (
-				8456CA481D3F1437003F44FE /* DateUtils.h */,
-				8456CA491D3F1437003F44FE /* DateUtils.m */,
-			);
-			path = viewModel;
-			sourceTree = "<group>";
-		};
-		84CAAFBA1D3E4C0100678E33 /* baseNav */ = {
-			isa = PBXGroup;
-			children = (
-				8456CA3F1D3F1377003F44FE /* BaseNavigationController.h */,
-				8456CA401D3F1377003F44FE /* BaseNavigationController.m */,
-			);
-			path = baseNav;
-			sourceTree = "<group>";
-		};
-		84CAAFC71D3E5ED800678E33 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8456CA6B1D3F16BA003F44FE /* JKCourse-Prefix.pch */,
-				8456CA5C1D3F1514003F44FE /* Public.h */,
-				8456CA5D1D3F1514003F44FE /* YFJLeftSwipeDeleteTableView.h */,
-				8456CA5E1D3F1514003F44FE /* YFJLeftSwipeDeleteTableView.m */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,16 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8456CA701D3F1821003F44FE /* courses-1.json in Resources */,
-				8456CA6A1D3F15EE003F44FE /* TermViewController.xib in Resources */,
 				84AEA58E1D3B03A3003AC5D3 /* LaunchScreen.storyboard in Resources */,
-				8456CA721D3F1821003F44FE /* terms.json in Resources */,
-				8456CA3E1D3F1347003F44FE /* CourseViewController.xib in Resources */,
 				84AEA58B1D3B03A3003AC5D3 /* Assets.xcassets in Resources */,
-				8456CA5A1D3F147D003F44FE /* DayTableViewCell.xib in Resources */,
 				84AEA5891D3B03A3003AC5D3 /* Main.storyboard in Resources */,
-				8456CA711D3F1821003F44FE /* courses.json in Resources */,
-				8456CA681D3F15EE003F44FE /* TermCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,21 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8456CA411D3F1377003F44FE /* BaseNavigationController.m in Sources */,
-				8456CA591D3F147D003F44FE /* DayTableViewCell.m in Sources */,
-				8456CA4F1D3F1452003F44FE /* Term.m in Sources */,
-				8456CA671D3F15EE003F44FE /* TermCell.m in Sources */,
-				8456CA3D1D3F1347003F44FE /* CourseViewController.m in Sources */,
-				8456CA501D3F1452003F44FE /* WeekCourse.m in Sources */,
-				8456CA581D3F147D003F44FE /* CourseButton.m in Sources */,
-				8456CA691D3F15EE003F44FE /* TermViewController.m in Sources */,
-				8456CA5F1D3F1514003F44FE /* YFJLeftSwipeDeleteTableView.m in Sources */,
-				8456CA461D3F1425003F44FE /* MBProgressHUD.m in Sources */,
 				84AEA5831D3B03A3003AC5D3 /* AppDelegate.m in Sources */,
-				8456CA4A1D3F1437003F44FE /* DateUtils.m in Sources */,
 				84AEA5801D3B03A3003AC5D3 /* main.m in Sources */,
-				8456CA471D3F1425003F44FE /* TwoTitleButton.m in Sources */,
-				8456CA5B1D3F147D003F44FE /* WeekChoseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

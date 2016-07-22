@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		845405651D406873000153A7 /* TimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845405641D406873000153A7 /* TimetableViewController.m */; };
 		8454056B1D4068DA000153A7 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845405681D4068DA000153A7 /* BaseNavigationController.m */; };
+		845405701D406A8E000153A7 /* DayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8454056D1D406A8E000153A7 /* DayView.m */; };
+		845405711D406A8E000153A7 /* WeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8454056F1D406A8E000153A7 /* WeekView.m */; };
+		845405751D40B240000153A7 /* course.json in Resources */ = {isa = PBXBuildFile; fileRef = 845405741D40B240000153A7 /* course.json */; };
+		845405781D40B3D8000153A7 /* timetableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845405771D40B3D8000153A7 /* timetableViewModel.m */; };
 		84AEA5801D3B03A3003AC5D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEA57F1D3B03A3003AC5D3 /* main.m */; };
 		84AEA5831D3B03A3003AC5D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AEA5821D3B03A3003AC5D3 /* AppDelegate.m */; };
 		84AEA5891D3B03A3003AC5D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84AEA5871D3B03A3003AC5D3 /* Main.storyboard */; };
@@ -22,6 +26,13 @@
 		845405671D4068DA000153A7 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		845405681D4068DA000153A7 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		8454056A1D4068DA000153A7 /* Public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Public.h; sourceTree = "<group>"; };
+		8454056C1D406A8E000153A7 /* DayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayView.h; sourceTree = "<group>"; };
+		8454056D1D406A8E000153A7 /* DayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayView.m; sourceTree = "<group>"; };
+		8454056E1D406A8E000153A7 /* WeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekView.h; sourceTree = "<group>"; };
+		8454056F1D406A8E000153A7 /* WeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekView.m; sourceTree = "<group>"; };
+		845405741D40B240000153A7 /* course.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = course.json; sourceTree = "<group>"; };
+		845405761D40B3D8000153A7 /* timetableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timetableViewModel.h; path = ../model/timetableViewModel.h; sourceTree = "<group>"; };
+		845405771D40B3D8000153A7 /* timetableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = timetableViewModel.m; path = ../model/timetableViewModel.m; sourceTree = "<group>"; };
 		84AEA57B1D3B03A3003AC5D3 /* gcdqn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gcdqn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AEA57F1D3B03A3003AC5D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84AEA5811D3B03A3003AC5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +57,7 @@
 		8454055E1D4067F9000153A7 /* timetable */ = {
 			isa = PBXGroup;
 			children = (
+				845405721D40B19F000153A7 /* data */,
 				8454055F1D4067F9000153A7 /* model */,
 				845405601D4067F9000153A7 /* view */,
 				845405611D4067F9000153A7 /* viewController */,
@@ -64,6 +76,10 @@
 		845405601D4067F9000153A7 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				8454056C1D406A8E000153A7 /* DayView.h */,
+				8454056D1D406A8E000153A7 /* DayView.m */,
+				8454056E1D406A8E000153A7 /* WeekView.h */,
+				8454056F1D406A8E000153A7 /* WeekView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -80,6 +96,8 @@
 		845405621D4067F9000153A7 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				845405761D40B3D8000153A7 /* timetableViewModel.h */,
+				845405771D40B3D8000153A7 /* timetableViewModel.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -99,6 +117,14 @@
 				8454056A1D4068DA000153A7 /* Public.h */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		845405721D40B19F000153A7 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				845405741D40B240000153A7 /* course.json */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		84AEA5721D3B03A2003AC5D3 = {
@@ -202,6 +228,7 @@
 				84AEA58E1D3B03A3003AC5D3 /* LaunchScreen.storyboard in Resources */,
 				84AEA58B1D3B03A3003AC5D3 /* Assets.xcassets in Resources */,
 				84AEA5891D3B03A3003AC5D3 /* Main.storyboard in Resources */,
+				845405751D40B240000153A7 /* course.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +241,11 @@
 			files = (
 				8454056B1D4068DA000153A7 /* BaseNavigationController.m in Sources */,
 				84AEA5831D3B03A3003AC5D3 /* AppDelegate.m in Sources */,
+				845405701D406A8E000153A7 /* DayView.m in Sources */,
 				84AEA5801D3B03A3003AC5D3 /* main.m in Sources */,
+				845405711D406A8E000153A7 /* WeekView.m in Sources */,
 				845405651D406873000153A7 /* TimetableViewController.m in Sources */,
+				845405781D40B3D8000153A7 /* timetableViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

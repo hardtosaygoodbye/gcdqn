@@ -24,6 +24,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        //初始化当前周数
         self.currentWeek = @"1";
         //初始化ui界面
         [self _initUI];

@@ -9,6 +9,7 @@
 #import "WeekView.h"
 #import "Public.h"
 #import "timetableViewModel.h"
+#import "TimetableModel.h"
 
 #define kWidthGrid self.frame.size.width/7.5
 @interface WeekView()
@@ -40,10 +41,12 @@
 {
     
     for (int i=0; i<self.dataArray.count; i++) {
-        NSDictionary *dic = self.dataArray[i];
+        //NSDictionary *dic = self.dataArray[i];
+        TimetableModel *model = self.dataArray[i];
+        
         //获取该课程哪几周有课
-        NSString *temp = dic[@"smartPeriod"];
-
+        //NSString *temp = dic[@"smartPeriod"];
+        NSString *temp = model.smartPeriod;
         NSArray *haveLessonWeek = [temp componentsSeparatedByString:@" "];
         //NSLog(@"%@",haveLessonWeek);
         
@@ -58,22 +61,22 @@
         
         if (key==YES) {
             //星期数
-            NSNumber *weekDayNum = dic[@"day"];
+            NSNumber *weekDayNum = model.day;
             CGFloat weekDayFloat = weekDayNum.intValue;
             //根据星期数计算x值
             CGFloat positionX = (0.5+weekDayFloat-1)*kWidthGrid;
             //上课开始第几节课
-            NSNumber *sectionstart = dic[@"sectionstart"];
+            NSNumber *sectionstart = model.sectionstart;
             CGFloat sectionstartFloat = sectionstart.intValue;
             //根据以上内容算y的起始位置
             CGFloat positionBeginY = (sectionstartFloat-1)*50;
             //上课结束第几节课
-            NSNumber *sectionend = dic[@"sectionend"];
+            NSNumber *sectionend = model.sectionend;
             CGFloat sectionendFloat = sectionend.intValue;
             //根据以上内容算y的结束位置
             CGFloat positionEndY = (sectionendFloat)*50;
             //课程名字
-            NSString *name = dic[@"name"];
+            NSString *name = model.name;
             //每一次课都是一个按钮
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             btn.frame = CGRectMake(positionX, positionBeginY, kWidthGrid, positionEndY-positionBeginY);
@@ -96,7 +99,13 @@
 - (void)_loadData
 {
     timetableViewModel *timetableVM = [[timetableViewModel alloc]init];
-    self.dataArray = timetableVM.data;
+    //self.dataArray = timetableVM.data;
+    timetableVM.returnValueBlock = ^(id returnValue){
+        self.dataArray = returnValue;
+    };
+    
+    [timetableVM getTimetableData];
+    
 }
 
 //初始化ui界面

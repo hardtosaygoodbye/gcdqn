@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface timetableViewModel : NSObject
-@property (nonatomic,strong) NSArray *data;
+//@property (nonatomic,strong) NSArray *data;
+@property (nonatomic,copy) void (^returnValueBlock)(id returnValue);
+
+- (void)getTimetableData;
+
 @end

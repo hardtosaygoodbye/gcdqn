@@ -16,6 +16,12 @@
 @property (nonatomic,strong) NSArray *dataArray;
 @property (nonatomic,strong) UIScrollView *mainScrollView;
 @property (nonatomic,strong) NSString *currentWeek;
+
+//每个课时对应按钮，比如离散数学是周一的第7，8，9课时
+@property (nonatomic,strong) NSMutableDictionary<NSString *,UIButton *> *courseButtonDictionary;
+
+//每个课时对应是否有课
+@property (nonatomic,strong) NSMutableDictionary *haveAClass;
 @end
 
 
@@ -40,8 +46,28 @@ static const CGFloat GRID_HEIGHT = 50.0f;
         [self _loadData];
         //将课表数据加载到界面上
         [self _showTimetable];
+        
+        //将按钮添加到滚动视图
+        [self addAllButtonsToMainScrollView];
     }
     return self;
+}
+
+#pragma mark - courseButtonDictionary,haveAClass
+-(NSMutableDictionary<NSString *,UIButton *> *)courseButtonDictionary
+{
+    if (!_courseButtonDictionary) {
+        _courseButtonDictionary = [[NSMutableDictionary alloc] init];
+    }
+    return _courseButtonDictionary;
+}
+
+-(NSMutableDictionary *)haveAClass
+{
+    if (!_haveAClass) {
+        _haveAClass = [[NSMutableDictionary alloc] init];
+    }
+    return _haveAClass;
 }
 
 - (void)_showTimetable
@@ -92,14 +118,37 @@ static const CGFloat GRID_HEIGHT = 50.0f;
             btn.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter-Bold" size:10];
             
             btn.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:0.7];
-            [self.mainScrollView addSubview:btn];
-        }
-
-        
-        
-        
-        
-        
+            
+            /***（二）***/
+            /*
+             *遍历当前课程，对应的每个课时
+             *haveAClass有课的课时value赋值为YES
+             *所以如果value已经为YES，则这里有课程冲突
+             *有冲突的地方需合并button，并设置背景色为红色提醒
+             */
+            BOOL isUpdate = NO;
+            for (int i = [sectionstart intValue]; i <= [sectionend intValue]; i++) {
+                NSString *aClass = [NSString stringWithFormat:@"%d,%d",[weekDayNum intValue],i];
+                if (![[self.haveAClass valueForKey:aClass] boolValue]) {
+                    [self.haveAClass setValue:[NSNumber numberWithBool:YES] forKey:aClass];
+                }else {
+                    if (!isUpdate) {
+                        UIButton *oldBtn = [self.courseButtonDictionary objectForKey:aClass];
+                        
+                        CGFloat Y =  oldBtn.frame.origin.y < positionBeginY ? oldBtn.frame.origin.y : positionBeginY;
+                        CGFloat endY = (oldBtn.frame.size.height + oldBtn.frame.origin.y) < positionEndY ? positionEndY : oldBtn.frame.size.height + oldBtn.frame.origin.y;
+                        [btn setFrame:CGRectMake(positionX, Y, kWidthGrid, endY - Y)];
+                        [btn setBackgroundColor:[UIColor redColor]];
+                        NSString *oldBtnTitle = [oldBtn.currentTitle stringByAppendingString:@"+"];
+                        [btn setTitle:[oldBtnTitle stringByAppendingString:btn.currentTitle] forState:UIControlStateNormal];
+                        [oldBtn setFrame:CGRectMake(0, 0, 0, 0)];
+                        isUpdate = YES;
+                    }
+                }
+                //标记每个课时的位置，对应于哪一个button
+                [self.courseButtonDictionary setObject:btn forKey:aClass];
+            }
+        }  
     }
 }
 
@@ -160,13 +209,32 @@ static const CGFloat GRID_HEIGHT = 50.0f;
                 UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((j-0.5)*kWidthGrid-1, i*GRID_HEIGHT, kWidthGrid, GRID_HEIGHT+1)];
                 imageView.image = [UIImage imageNamed:@"course_excel.png"];
                 [self.mainScrollView addSubview:imageView];
+                
+                /***（一）***/
+                //初始化12*7个课时(NO代表没有课，YES代表有课)，默认没有课
+                NSString *aClass = [NSString stringWithFormat:@"%d,%d",j,i+1];//字典的KEY
+                [self.haveAClass setObject:[NSNumber numberWithBool:NO] forKey:aClass];
             }
             
         }
     }
     [self addSubview:self.mainScrollView];
+}
+
+-(void)addAllButtonsToMainScrollView
+{
+    //提出所有的button
+    NSArray *array = [self.courseButtonDictionary allValues];
     
+    //过滤掉重复的部分
+    NSSet *set = [NSSet setWithArray:array];
     
+    //过滤掉frame为(0,0,0,0)的部分
+    for (UIButton *btn in set) {
+        if (btn.frame.size.height > 0) {
+            [self.mainScrollView addSubview:btn];
+        }
+    }
 }
 
 @end

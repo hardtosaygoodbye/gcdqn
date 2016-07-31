@@ -1,0 +1,13 @@
+1)2016.07.27 15:37 --WeekView.m-- 修改magic number(HEADER_VIEW_HEIGHT:30,GRID_HEIGHT:50)
+
+2)2016.07.31 09:19 --WeekView.m--
+                                    //每个课时对应按钮，比如离散数学是周一的第7，8，9课时
+                                    @property (nonatomic,strong) NSMutableDictionary<NSString *,UIButton *> *courseButtonDictionary;
+
+                                    //每个课时对应是否有课
+                                    @property (nonatomic,strong) NSMutableDictionary *haveAClass;
+
+                                    /*合并冲突的按钮*/
+
+                                    //将按钮添加到滚动视图
+                                    [self addAllButtonsToMainScrollView];

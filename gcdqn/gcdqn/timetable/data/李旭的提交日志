@@ -11,3 +11,12 @@
 
                                     //将按钮添加到滚动视图
                                     [self addAllButtonsToMainScrollView];
+3)git commit -m "2016.08.02 09:38 --timetableViewModel.m,timetableModel.h,Public.h--
+
+                                    在model里添加teacher属性
+                                    Public.h加入LX_DEBUG,用于打印日志
+
+4)2016.08.02 19:10 --WeekView.m,Browser.h/m,CourseDetailViewCtroller.h/m,Main.storyboard--
+
+                                    WeekView.m:添加课程冲突浏览器(browser.h/m)
+                                    CourseDetailViewCtroller.h/m+Main.storyboard:显示课程详情,

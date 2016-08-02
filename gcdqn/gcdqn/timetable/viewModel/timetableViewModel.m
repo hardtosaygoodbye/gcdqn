@@ -50,6 +50,7 @@
         model.day = tempDic[@"day"];
         model.sectionstart = tempDic[@"sectionstart"];
         model.sectionend = tempDic[@"sectionend"];
+        model.teacher = tempDic[@"teacher"];
         [modelArray addObject:model];
     }
     

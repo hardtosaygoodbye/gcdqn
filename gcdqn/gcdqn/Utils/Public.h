@@ -21,4 +21,7 @@
 //快捷rgb颜色
 #define RGBColor(r,g,b,a) ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
 
+//李旭调试代码
+#define LX_DEBUG 1
+
 #endif /* Public_h */

@@ -51,6 +51,8 @@
         model.sectionstart = tempDic[@"sectionstart"];
         model.sectionend = tempDic[@"sectionend"];
         model.teacher = tempDic[@"teacher"];
+        model.locale = tempDic[@"locale"];
+        model.period = tempDic[@"period"];
         [modelArray addObject:model];
     }
     

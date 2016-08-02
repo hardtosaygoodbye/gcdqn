@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimetableViewController.h"
 
 @interface WeekView : UIView
+
+@property (nonatomic,strong)TimetableViewController *ctrl;
 
 @end

@@ -25,9 +25,13 @@
     NSLog(@"导航栏高度：%f",navRect.size.height);
     //将周课程表添加到视图控制器中
     WeekView *weekView = [[WeekView alloc]initWithFrame:CGRectMake(0, statusRect.size.height+navRect.size.height, self.view.frame.size.width, self.view.frame.size.height-(statusRect.size.height+navRect.size.height))];
+    weekView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:weekView];
     
+    weekView.ctrl = self;
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

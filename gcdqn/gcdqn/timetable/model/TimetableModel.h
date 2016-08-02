@@ -31,6 +31,8 @@
  */
 #import <Foundation/Foundation.h>
 @interface TimetableModel : NSObject
+@property (nonatomic,copy) NSString *period;
+@property (nonatomic,copy) NSString *locale;
 @property (nonatomic,copy) NSString *teacher;
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,copy) NSString *smartPeriod;

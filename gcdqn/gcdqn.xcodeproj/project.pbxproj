@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C19705F1D49FF3300910739 /* 李旭的提交日志 in Resources */ = {isa = PBXBuildFile; fileRef = 5C19705E1D49FF3300910739 /* 李旭的提交日志 */; };
+		5C1970F41D506B6000910739 /* CourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1970F31D506B6000910739 /* CourseDetailViewController.m */; };
+		5C1970FD1D508D6E00910739 /* BrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1970FC1D508D6E00910739 /* BrowserView.m */; };
 		845405651D406873000153A7 /* TimetableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845405641D406873000153A7 /* TimetableViewController.m */; };
 		8454056B1D4068DA000153A7 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845405681D4068DA000153A7 /* BaseNavigationController.m */; };
 		845405701D406A8E000153A7 /* DayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8454056D1D406A8E000153A7 /* DayView.m */; };
@@ -22,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C19705E1D49FF3300910739 /* 李旭的提交日志 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "李旭的提交日志"; sourceTree = "<group>"; };
+		5C1970F21D506B6000910739 /* CourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDetailViewController.h; sourceTree = "<group>"; };
+		5C1970F31D506B6000910739 /* CourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDetailViewController.m; sourceTree = "<group>"; };
+		5C1970FB1D508D6E00910739 /* BrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserView.h; sourceTree = "<group>"; };
+		5C1970FC1D508D6E00910739 /* BrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserView.m; sourceTree = "<group>"; };
 		845405631D406873000153A7 /* TimetableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimetableViewController.h; sourceTree = "<group>"; };
 		845405641D406873000153A7 /* TimetableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimetableViewController.m; sourceTree = "<group>"; };
 		845405671D4068DA000153A7 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
@@ -85,6 +93,8 @@
 				8454056D1D406A8E000153A7 /* DayView.m */,
 				8454056E1D406A8E000153A7 /* WeekView.h */,
 				8454056F1D406A8E000153A7 /* WeekView.m */,
+				5C1970FB1D508D6E00910739 /* BrowserView.h */,
+				5C1970FC1D508D6E00910739 /* BrowserView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -94,6 +104,8 @@
 			children = (
 				845405631D406873000153A7 /* TimetableViewController.h */,
 				845405641D406873000153A7 /* TimetableViewController.m */,
+				5C1970F21D506B6000910739 /* CourseDetailViewController.h */,
+				5C1970F31D506B6000910739 /* CourseDetailViewController.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				845405741D40B240000153A7 /* course.json */,
+				5C19705E1D49FF3300910739 /* 李旭的提交日志 */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -234,6 +247,7 @@
 				84AEA58B1D3B03A3003AC5D3 /* Assets.xcassets in Resources */,
 				84AEA5891D3B03A3003AC5D3 /* Main.storyboard in Resources */,
 				845405751D40B240000153A7 /* course.json in Resources */,
+				5C19705F1D49FF3300910739 /* 李旭的提交日志 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,10 +262,12 @@
 				84AEA5831D3B03A3003AC5D3 /* AppDelegate.m in Sources */,
 				849A8DB01D43B41800CF5156 /* timetableViewModel.m in Sources */,
 				845F7BD91D460C43005FB836 /* TimetableModel.m in Sources */,
+				5C1970F41D506B6000910739 /* CourseDetailViewController.m in Sources */,
 				845405701D406A8E000153A7 /* DayView.m in Sources */,
 				84AEA5801D3B03A3003AC5D3 /* main.m in Sources */,
 				845405711D406A8E000153A7 /* WeekView.m in Sources */,
 				845405651D406873000153A7 /* TimetableViewController.m in Sources */,
+				5C1970FD1D508D6E00910739 /* BrowserView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

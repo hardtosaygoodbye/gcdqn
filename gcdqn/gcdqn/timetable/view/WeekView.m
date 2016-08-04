@@ -202,7 +202,7 @@ static const CGFloat GRID_HEIGHT = 50.0f;
         courseDVC.title = model.name;
         
         //发送通知
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"WeekViewToCourseDVC" object:model];
+        [self sendNotificationToCourseDetailViewCtroller:model];
         
         [self.ctrl.navigationController pushViewController:courseDVC animated:YES];
     }else if ([obj isKindOfClass:[NSMutableArray class]]){
@@ -211,7 +211,7 @@ static const CGFloat GRID_HEIGHT = 50.0f;
         UIView *browserBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
         browserBackgroundView.backgroundColor = [UIColor grayColor];
         browserBackgroundView.alpha = 0.7f;
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapbrowserBackgroundView:)];
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapbrowserBackgroundView)];
         [browserBackgroundView addGestureRecognizer:tapGesture];
         self.browserBackgroundView = browserBackgroundView;
         [self.superview addSubview:browserBackgroundView];
@@ -224,7 +224,7 @@ static const CGFloat GRID_HEIGHT = 50.0f;
 }
 
 //移除browserBackgroundView
--(void)tapbrowserBackgroundView:(UITapGestureRecognizer *)tapGesture
+-(void)tapbrowserBackgroundView
 {
     [self.browserBackgroundView removeFromSuperview];
     [self.browser removeFromSuperview];
@@ -325,9 +325,9 @@ static const CGFloat GRID_HEIGHT = 50.0f;
     courseDVC.title = model.name;
     
     //发送通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"WeekViewToCourseDVC" object:model];
-    [self.browserBackgroundView removeFromSuperview];
-    [self.browser removeFromSuperview];
+    [self sendNotificationToCourseDetailViewCtroller:model];
+    
+    [self tapbrowserBackgroundView];
     [self.ctrl.navigationController pushViewController:courseDVC animated:YES];
 }
 
@@ -345,6 +345,16 @@ static NSInteger _lastIndex = -1;
         NSLog(@"刷新---%@", ((TimetableModel *)self.courseDataArray[index]).name);
     }
     _lastIndex = index;
+}
+
+#pragma mark - 发送通知
+-(void)sendNotificationToCourseDetailViewCtroller:(TimetableModel *)model
+{
+    NSDictionary *userInfo = @{@"model" : model};
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"WeekViewToCourseDVC"
+     object:self
+     userInfo:userInfo];
 }
 
 @end

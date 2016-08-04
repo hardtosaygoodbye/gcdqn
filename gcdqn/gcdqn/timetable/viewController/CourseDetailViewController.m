@@ -24,7 +24,24 @@
     // Do any additional setup after loading the view.
     
     //注册通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(configCourseMessage:) name:@"WeekViewToCourseDVC" object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(configCourseMessage:) name:@"WeekViewToCourseDVC" object:nil];
+    [[NSNotificationCenter defaultCenter]
+     addObserverForName:@"WeekViewToCourseDVC"
+     object:nil
+     queue:nil
+     usingBlock:^(NSNotification * _Nonnull note) {
+        self.model = (TimetableModel *)note.userInfo[@"model"];
+         NSLog(@"model = %@",self.model);
+        self.courseNameLabel.text = self.model.name;
+        self.courseNameLabel.numberOfLines = 0;
+        self.courseClassroomLabel.text = self.model.locale;
+        self.teacherNameLabel.text = self.model.teacher;
+        
+        //换算出周几上课
+        NSString *courseTime = [NSString stringWithFormat:@"周%@%d-%d节",[self switchWeekDay:self.model.day],[self.model.sectionstart intValue],[self.model.sectionend intValue]];
+        self.courseTimeLabel.text = courseTime;
+        self.courseWeekTimeLabel.text = self.model.period;
+    }];
     
 //    [self configCourseMessage];
     
